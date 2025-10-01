@@ -49,7 +49,7 @@ First, install all necessary dependencies and tools:
 
 Then copy the .zshrc file from this repository to you `$HOME` directory like so:
 
-`cp .zshrc ~/.zshrc`
+`cp .zshrc.sample ~/.zshrc`
 
 Finally, run `source ~/.zshrc`. That should open the interactive prompt to create your powerlevel10k theme.
 

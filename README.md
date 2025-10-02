@@ -22,6 +22,8 @@ Install dependencies:
 
 `brew install neovim`
 
+> Caveat: Some language servers need language binaries or package manager installed in order to work. The current list of preinstalled tools need *npm* and *go* installed to work properly. My recommendation is to use [proto](https://moonrepo.dev/proto) to manage the installation of those tools
+
 ### Aerospace:
 
 `brew install --cask nikitabobko/tap/aerospace`

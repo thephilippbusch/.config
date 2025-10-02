@@ -48,6 +48,10 @@ brew tap FelixKratz/formulae
 brew install sketchybar
 ```
 
+Start Sketchybar by running:
+
+`brew services start sketchybar`
+
 ### Lazygit:
 
 `brew install lazygit`

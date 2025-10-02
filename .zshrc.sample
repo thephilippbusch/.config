@@ -52,7 +52,7 @@ alias ld="lazydocker"
 alias lg="lazygit"
 
 # ---- Enable vi mode ----
-source $HOME/.config/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 # ---- Launch Tmux ----
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then

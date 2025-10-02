@@ -6,3 +6,5 @@ karabiner/**
 raycast/**
 StardewValley/**
 yarn/**
+tmux/plugins
+zsh-vi-mode

@@ -14,6 +14,10 @@ This repository includes configurations for the following tools:
 
 `brew install tmux`
 
+Install dependencies:
+
+`git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm`
+
 ### Neovim:
 
 `brew install neovim`

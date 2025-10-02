@@ -1,11 +1,12 @@
-# My .config files repository 
+# My .config files repository
 
 This repository includes configurations for the following tools:
- - Neovim (-> ./nvim)
- - Aerospace (-> ./aerospace)
- - Sketchybar (-> ./sketchybar)
- - yazi (-> ./yazi)
- - tmux (-> ./tmux)
+
+- Neovim (-> ./nvim)
+- Aerospace (-> ./aerospace)
+- Sketchybar (-> ./sketchybar)
+- yazi (-> ./yazi)
+- tmux (-> ./tmux)
 
 ## Tool installation and setup (for MacOS)
 
@@ -22,6 +23,19 @@ This repository includes configurations for the following tools:
 `brew install --cask nikitabobko/tap/aerospace`
 
 ### Sketchybar:
+
+Install dependencies:
+
+```
+brew install font-sf-pro
+brew install --cask sf-symbols
+```
+
+Install *sketchybar-app-font*:
+
+`curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v1.0.16/sketchybar-app-font.ttf -o $HOME/Library/Fonts/sketchybar-app-font.ttf`
+
+Install Sketchybar
 
 ```
 brew tap FelixKratz/formulae
@@ -40,12 +54,13 @@ brew install sketchybar
 
 First, install all necessary dependencies and tools:
 
- - **Nerd Font:** `brew install font-meslo-lg-nerd-font`
- - **Powerlevel10k Theme:** `brew install powerlevel10k`
- - **Zsh Autosuggestions:** `brew install zsh-autosuggestions`
- - **Zsh syntax highlighting:** `brew install zsh-syntax-highlighting`
- - **Eza (better *ls*):** `brew install eza`
- - **Zoxide (better *cd*):** `brew install zoxide`
+- **Nerd Font:** `brew install font-meslo-lg-nerd-font`
+- **Powerlevel10k Theme:** `brew install powerlevel10k`
+- **Zsh Autosuggestions:** `brew install zsh-autosuggestions`
+- **Zsh syntax highlighting:** `brew install zsh-syntax-highlighting`
+- **Eza (better *ls*):** `brew install eza`
+- **Zoxide (better *cd*):** `brew install zoxide`
+- **Zsh vi mode (*optional*):** `brew install zsh-vi-mode`
 
 Then copy the .zshrc file from this repository to you `$HOME` directory like so:
 

@@ -1,10 +1,18 @@
-argocd/**
-configstore/**
-graphite/**
-iterm2/**
-karabiner/**
-raycast/**
-StardewValley/**
-yarn/**
-tmux/plugins
-zsh-vi-mode
+# This repository ignores every directory by default to exclude private/custom configurations and git submodules
+/*
+
+# All root level files (and dotfiles) will be INCLUDED and tracked by default
+!/*.*
+!/.*
+
+# The following folders will be INCLUDED and therefore tracked by git
+!/.git/
+!/aerospace/
+!/nvim/
+!/sketchybar/
+!/tmux/
+!/yazi/
+!/zsh/
+
+# The following subfolders will be EXCLUDED even though there root folder is tracked
+/tmux/plugins

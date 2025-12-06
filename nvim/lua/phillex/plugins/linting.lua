@@ -1,3 +1,5 @@
+local smart_lint = require("phillex.util.smart-linter")
+
 return {
 	"mfussenegger/nvim-lint",
 	event = { "BufReadPre", "BufNewFile" },
@@ -17,13 +19,13 @@ return {
 
 		vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
 			group = lint_augroup,
-			callback = function()
-				lint.try_lint()
+			callback = function(args)
+				smart_lint(args.buf)
 			end,
 		})
 
 		vim.keymap.set("n", "<leader>l", function()
-			lint.try_lint()
+			smart_lint(vim.api.nvim_get_current_buf())
 		end, { desc = "Trigger linting for current file" })
 	end,
 }

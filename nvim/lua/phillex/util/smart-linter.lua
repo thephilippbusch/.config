@@ -5,7 +5,6 @@ local find_config = require("phillex.util.find-config")
 ---@param bufnr string
 ---@return string
 local function get_js_linter(bufnr)
-	print(bufnr)
 	local root = get_workspace_root(bufnr)
 
 	if find_config.cached_linters[root] then

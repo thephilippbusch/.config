@@ -36,3 +36,6 @@ keymap.set("n", "<leader>do", "<cmd>lua vim.diagnostic.open_float()<CR>", { nore
 keymap.set("n", "<leader>d[", "<cmd>lua vim.diagnostic.goto_prev()<CR>", { noremap = true, silent = true })
 keymap.set("n", "<leader>d]", "<cmd>lua vim.diagnostic.goto_next()<CR>", { noremap = true, silent = true })
 keymap.set("n", "<leader>dd", "<cmd>Telescope diagnostics<CR>", { noremap = true, silent = true })
+
+-- Disable Suspense on <C-z>
+keymap.set("n", "<C-z>", "<nop>", { noremap = true })

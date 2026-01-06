@@ -114,13 +114,14 @@ alt-shift-1 = ['workspace 1', 'mode main']
 alt-shift-2 = ['workspace 2', 'mode main']
 alt-shift-3 = ['workspace 3', 'mode main']
 alt-shift-b = ['workspace B', 'mode main'] # Browser
-alt-shift-c = ['workspace C', 'mode main'] # Coding
+alt-shift-c = ['workspace C', 'mode main'] # Communication
 alt-shift-d = ['workspace D', 'mode main'] # Docker
 alt-shift-e = ['workspace E', 'mode main'] # Explorer (Finder)
-alt-shift-g = ['workspace G', 'mode main'] # Git
-alt-shift-m = ['workspace M', 'mode main'] # Music
+alt-shift-g = ['workspace G', 'mode main'] # Gaming
+alt-shift-m = ['workspace M', 'mode main'] # Mail
 alt-shift-n = ['workspace N', 'mode main'] # Notes
-alt-shift-t = ['workspace T', 'mode main'] # Terminal
+alt-shift-s = ['workspace S', 'mode main'] # Spotify
+alt-shift-t = ['workspace T', 'mode main'] # Terminal / Coding
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-shift-tab = ['workspace-back-and-forth', 'mode main']
@@ -157,13 +158,14 @@ alt-1 = ['move-node-to-workspace 1', 'workspace 1', 'mode main']
 alt-2 = ['move-node-to-workspace 2', 'workspace 2', 'mode main']
 alt-3 = ['move-node-to-workspace 3', 'workspace 3', 'mode main']
 alt-b = ['move-node-to-workspace B', 'workspace B', 'mode main'] # Browser
-alt-c = ['move-node-to-workspace C', 'workspace C', 'mode main'] # Coding
-alt-e = ['move-node-to-workspace E', 'workspace E', 'mode main'] # Explorer (Finder)
+alt-c = ['move-node-to-workspace C', 'workspace C', 'mode main'] # Communication (Teams, Slack, WhatsApp, etc.)
 alt-d = ['move-node-to-workspace D', 'workspace D', 'mode main'] # Docker
-alt-g = ['move-node-to-workspace G', 'workspace G', 'mode main'] # Git
-alt-m = ['move-node-to-workspace M', 'workspace M', 'mode main'] # Music
-alt-n = ['move-node-to-workspace N', 'workspace N', 'mode main'] # Notes
-alt-t = ['move-node-to-workspace T', 'workspace T', 'mode main'] # Terminal
+alt-e = ['move-node-to-workspace E', 'workspace E', 'mode main'] # Explorer (Finder)
+alt-g = ['move-node-to-workspace G', 'workspace G', 'mode main'] # Gaming
+alt-m = ['move-node-to-workspace M', 'workspace M', 'mode main'] # Mail (Outlook)
+alt-n = ['move-node-to-workspace N', 'workspace N', 'mode main'] # Notes (Obsidian)
+alt-s = ['move-node-to-workspace S', 'workspace S', 'mode main'] # Spotify
+alt-t = ['move-node-to-workspace T', 'workspace T', 'mode main'] # Terminal / Coding (Ghostty, VS Code, etc.)
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
 tab = ['move-workspace-to-monitor --wrap-around next', 'mode main']
@@ -188,10 +190,10 @@ alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
 # Workspace to monitor assignment
-[workspace-to-monitor-force-assignment]
-C = ['DELL', 'secondary', 'main']
-M = 'main'
-N = ['DELL', 'secondary', 'main']
+# [workspace-to-monitor-force-assignment]
+# C = ['DELL', 'secondary', 'main']
+# M = 'main'
+# N = ['DELL', 'secondary', 'main']
 
 # Automatic window detection
 [[on-window-detected]]
@@ -200,7 +202,7 @@ run = "move-node-to-workspace E"
 
 [[on-window-detected]]
 if.app-id = "com.spotify.client"
-run = "move-node-to-workspace 1"
+run = "move-node-to-workspace S"
 
 [[on-window-detected]]
 if.app-id = "company.thebrowser.Browser"
@@ -216,7 +218,7 @@ run = "move-node-to-workspace T"
 
 [[on-window-detected]]
 if.app-id = "com.microsoft.teams2"
-run = "move-node-to-workspace 1"
+run = "move-node-to-workspace C"
 
 [[on-window-detected]]
 if.app-id = "com.electron.dockerdesktop"
@@ -224,7 +226,7 @@ run = "move-node-to-workspace D"
 
 [[on-window-detected]]
 if.app-id = "com.microsoft.VSCode"
-run = "move-node-to-workspace C"
+run = "move-node-to-workspace T"
 
 [[on-window-detected]]
 if.app-id = "com.bitwarden.desktop"
@@ -236,7 +238,7 @@ run = "move-node-to-workspace E"
 
 [[on-window-detected]]
 if.app-id = "com.tinyspeck.slackmacgap"
-run = "move-node-to-workspace N"
+run = "move-node-to-workspace C"
 
 [[on-window-detected]]
 if.app-id = "com.microsoft.Outlook"

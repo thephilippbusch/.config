@@ -4,11 +4,26 @@ return {
 	config = function()
 		local lint = require("lint")
 
+		local function get_js_linter()
+			local bufnr = vim.api.nvim_get_current_buf()
+
+			local root = vim.fs.root(bufnr, { ".git", "package.json" }) or vim.fn.getcwd()
+			local linter = "biomejs" -- default
+
+			if vim.fn.filereadable(root .. "/biome.json") == 1 then
+				linter = "biomejs"
+			elseif vim.fn.glob(root .. "/.eslintrc*") ~= "" or vim.fn.glob(root .. "/eslint.config.*") == 1 then
+				linter = "eslint"
+			end
+
+			return { linter }
+		end
+
 		lint.linters_by_ft = {
-			javascript = { "biomejs" },
-			typescript = { "biomejs" },
-			javascriptreact = { "biomejs" },
-			typescriptreact = { "biomejs" },
+			javascript = get_js_linter(),
+			typescript = get_js_linter(),
+			javascriptreact = get_js_linter(),
+			typescriptreact = get_js_linter(),
 			json = { "biomejs" },
 			python = { "ruff" },
 		}

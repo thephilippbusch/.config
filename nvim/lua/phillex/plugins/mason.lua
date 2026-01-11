@@ -42,6 +42,7 @@ return {
 				"tailwindcss",
 				"ts_ls",
 				"yamlls",
+				"buf_ls",
 			},
 		})
 
@@ -52,6 +53,7 @@ return {
 				"mdformat", -- markdown formatter
 				"ruff", -- python formatter
 				"stylua", -- lua formatter
+				"buf", -- protobuffer formatter
 			},
 		})
 	end,

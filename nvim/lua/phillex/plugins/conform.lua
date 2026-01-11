@@ -20,6 +20,7 @@ return {
 				go = { "gofumpt" },
 				python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
 				rust = { "rustfmt" },
+				proto = { "buf" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

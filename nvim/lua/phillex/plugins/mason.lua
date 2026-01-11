@@ -49,11 +49,15 @@ return {
 		mason_tool_installer.setup({
 			ensure_installed = {
 				"biome", -- biome formatter
+				"prettier", -- prettier formatter
 				"gofumpt", -- go formatter
 				"mdformat", -- markdown formatter
 				"ruff", -- python formatter
 				"stylua", -- lua formatter
 				"buf", -- protobuffer formatter
+				"eslint", -- ts/js linter
+				"black", -- fallback python formatter
+				"isort", -- fallback python import sorter
 			},
 		})
 	end,

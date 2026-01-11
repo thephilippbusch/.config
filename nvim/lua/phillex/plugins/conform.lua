@@ -6,19 +6,62 @@ return {
 
 		conform.setup({
 			formatters_by_ft = {
-				javascript = { "biome", "biome-organize-imports", "biome-check", lsp_format = "never" },
-				typescript = { "biome", "biome-organize-imports", "biome-check", lsp_format = "never" },
-				javascriptreact = { "biome", "biome-organize-imports", "biome-check", lsp_format = "never" },
-				typescriptreact = { "biome", "biome-organize-imports", "biome-check", lsp_format = "never" },
-				svelte = { "biome", "biome-organize-imports", "biome-check" },
-				css = { "biome", "biome-check" },
-				html = { "biome", "biome-check" },
-				json = { "biome", "biome-check", lsp_format = "never" },
-				markdown = { "mdformat" },
+				typescript = function(bufnr)
+					if conform.get_formatter_info("prettier", bufnr).available then
+						return { "prettier", lsp_fallback = "never" }
+					else
+						return { "biome", "prettier", "biome-organize-imports", "biome-check", lsp_format = "never" }
+					end
+				end,
+				javascript = function(bufnr)
+					if conform.get_formatter_info("prettier", bufnr).available then
+						return { "prettier", lsp_fallback = "never" }
+					else
+						return { "biome", "prettier", "biome-organize-imports", "biome-check", lsp_format = "never" }
+					end
+				end,
+				typescriptreact = function(bufnr)
+					if conform.get_formatter_info("prettier", bufnr).available then
+						return { "prettier", lsp_fallback = "never" }
+					else
+						return { "biome", "prettier", "biome-organize-imports", "biome-check", lsp_format = "never" }
+					end
+				end,
+				javascriptreact = function(bufnr)
+					if conform.get_formatter_info("prettier", bufnr).available then
+						return { "prettier", lsp_fallback = "never" }
+					else
+						return { "biome", "prettier", "biome-organize-imports", "biome-check", lsp_format = "never" }
+					end
+				end,
+				svelte = { "biome", "prettier", "biome-organize-imports", "biome-check" },
+				css = { "biome", "prettier", "biome-check" },
+				html = { "biome", "prettier", "biome-check" },
+				json = function(bufnr)
+					if conform.get_formatter_info("prettier", bufnr).available then
+						return { "prettier", lsp_fallback = "never" }
+					else
+						return { "biome", "prettier", "biome-check", lsp_format = "never" }
+					end
+				end,
+				yaml = function(bufnr)
+					if conform.get_formatter_info("prettier", bufnr).available then
+						return { "prettier", lsp_fallback = "never" }
+					else
+						return { "biome", "prettier", "biome-check", lsp_format = "never" }
+					end
+				end,
+				markdown = { "prettier" },
 				graphql = { "biome", "biome-check" },
 				lua = { "stylua" },
 				go = { "gofumpt" },
-				python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
+				python = function(bufnr)
+					if conform.get_formatter_info("ruff_format", bufnr).available then
+						return { "ruff_format", "ruff_fix", "ruff_organize_imports" }
+					else
+						return { "isort", "black" }
+					end
+				end,
 				rust = { "rustfmt" },
 				proto = { "buf" },
 			},

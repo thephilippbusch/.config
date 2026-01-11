@@ -1,4 +1,4 @@
-# My .config files repository
+# My .config files repository for MacOS
 
 This repository includes configurations for the following tools:
 
@@ -22,7 +22,7 @@ Install dependencies:
 
 `brew install neovim`
 
-> Caveat: Some language servers need language binaries or package manager installed in order to work. The current list of preinstalled tools need *npm* and *go* installed to work properly. My recommendation is to use [proto](https://moonrepo.dev/proto) to manage the installation of those tools
+> Caveat: Some language servers need language binaries or package manager installed in order to work. The current list of preinstalled tools need _npm_ and _go_ installed to work properly. My recommendation is to use [proto](https://moonrepo.dev/proto) to manage the installation of those tools
 
 ### Aerospace:
 
@@ -37,7 +37,7 @@ brew install font-sf-pro
 brew install --cask sf-symbols
 ```
 
-Install *sketchybar-app-font*:
+Install _sketchybar-app-font_:
 
 `curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v1.0.16/sketchybar-app-font.ttf -o $HOME/Library/Fonts/sketchybar-app-font.ttf`
 
@@ -68,15 +68,15 @@ First, install all necessary dependencies and tools:
 - **Powerlevel10k Theme:** `brew install powerlevel10k`
 - **Zsh Autosuggestions:** `brew install zsh-autosuggestions`
 - **Zsh syntax highlighting:** `brew install zsh-syntax-highlighting`
-- **Eza (better *ls*):** `brew install eza`
-- **Zoxide (better *cd*):** `brew install zoxide`
-- **Zsh vi mode (*optional*):** `brew install zsh-vi-mode`
+- **Eza (better _ls_):** `brew install eza`
+- **Zoxide (better _cd_):** `brew install zoxide`
+- **Zsh vi mode (_optional_):** `brew install zsh-vi-mode`
 
-Then copy the .zshrc file from this repository to you `$HOME` directory like so:
+Then copy the .zshrc file from this repository to your `$HOME` directory like so:
 
 `cp .zshrc.sample ~/.zshrc`
 
-Finally, run `source ~/.zshrc`. That should open the interactive prompt to create your powerlevel10k theme.
+Finally, run `source ~/.zshrc`. That should open the interactive prompt to create your powerlevel10k theme (this will only run once for setup).
 
 ### Yazi (file explorer):
 

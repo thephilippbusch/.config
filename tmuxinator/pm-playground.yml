@@ -1,0 +1,14 @@
+name: pm-playground
+root: ~/Clients/Bayer/playground/
+
+windows:
+  - main:
+      layout: "e0fa,211x56,0,0[211x35,0,0,11,211x20,0,36,12]"
+      panes:
+        - editor:
+            -  # empty shell
+        - cli:
+            -  # empty shell
+  - opencode:
+      panes:
+        - opencode

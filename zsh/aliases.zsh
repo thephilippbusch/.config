@@ -12,6 +12,9 @@ alias ld="lazydocker"
 # ---- Lazygit -----
 alias lg="lazygit"
 
+# ---- Tmux -----
+alias mux="tmuxinator"
+
 # ---- Misc -----
 alias code="open -a 'Visual Studio Code'"
 alias c="clear"

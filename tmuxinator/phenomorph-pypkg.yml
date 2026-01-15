@@ -1,0 +1,5 @@
+<%= ERB.new(File.read(File.expand_path('~/.config/tmuxinator/pm-base.yml'))).result %>
+
+name: phenomorph-pypkg
+root: ~/Clients/Bayer/cell-painting-pypkg/
+windows: *base_windows

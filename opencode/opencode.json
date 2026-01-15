@@ -1,0 +1,59 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "share": "disabled",
+  "provider": {
+    "nlcodepilot": {
+      "name": "NL Codepilot",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "https://llm-proxy.edgez.live"
+      },
+      "models": {
+        "claude-latest": {
+          "name": "Claude Latest",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          },
+          "cost": {
+            "input": 1,
+            "output": 5
+          }
+        },
+        "claude-opus-4-5-20251101": {
+          "name": "Claude Opus 4.5",
+          "limit": {
+            "context": 75000,
+            "output": 24000
+          },
+          "cost": {
+            "input": 5,
+            "output": 25
+          }
+        },
+        "claude-sonnet-4-5-20250929": {
+          "name": "Claude Sonnet 4.5",
+          "limit": {
+            "context": 100000,
+            "output": 32000
+          },
+          "cost": {
+            "input": 3,
+            "output": 15
+          }
+        },
+        "claude-haiku-4-5-20251001": {
+          "name": "Claude Haiku 4.5",
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          },
+          "cost": {
+            "input": 1,
+            "output": 5
+          }
+        }
+      }
+    }
+  }
+}

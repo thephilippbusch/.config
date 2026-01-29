@@ -1,5 +1,5 @@
 <%= ERB.new(File.read(File.expand_path('~/.config/tmuxinator/coding-base.yml'))).result %>
 
-name: phenomorph-docs
-root: ~/Clients/Bayer/cell-painting-docs/
+name: slingshot-gui
+root: ~/Clients/Bayer/slingshot_gui/
 windows: *base_windows

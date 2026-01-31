@@ -1,5 +1,0 @@
-<%= ERB.new(File.read(File.expand_path('~/.config/tmuxinator/coding-base.yml'))).result %>
-
-name: slingshot-airflow
-root: ~/Clients/Bayer/slingshot_airflow/
-windows: *base_windows

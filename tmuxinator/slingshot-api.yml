@@ -1,5 +1,5 @@
 <%= ERB.new(File.read(File.expand_path('~/.config/tmuxinator/coding-base.yml'))).result %>
 
 name: slingshot-api
-root: ~/Clients/Bayer/slingshot_api/
+root: ~/Clients/Bayer/slingshot-api/
 windows: *base_windows

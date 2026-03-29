@@ -1,5 +1,5 @@
 <%= ERB.new(File.read(File.expand_path('~/.config/tmuxinator/coding-base.yml'))).result %>
 
-name: slingshot-gui
-root: ~/Clients/Bayer/slingshot-gui/
+name: tep-app
+root: ~/Personal/Coding/tep-app
 windows: *base_windows

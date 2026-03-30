@@ -11,9 +11,13 @@
 !/nvim/
 !/sketchybar/
 !/tmux/
-!/tmuxinator/*-layout.yml
+!/tmuxinator/
 !/yazi/
 !/zsh/
+
+# tmuxinator: only track the layouts/ subfolder, ignore everything else
+/tmuxinator/*
+!/tmuxinator/layouts/
 
 # The following subfolders will be EXCLUDED even though there root folder is tracked
 /tmux/plugins

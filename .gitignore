@@ -15,6 +15,7 @@
 !/yazi/
 !/zsh/
 !/lazygit/
+!/ghostty/
 
 # tmuxinator: only track the layouts/ subfolder, ignore everything else
 /tmuxinator/*

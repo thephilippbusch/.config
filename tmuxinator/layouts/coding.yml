@@ -10,4 +10,4 @@ base_windows: &base_windows
         - lg
   - agent:
       panes:
-        - agent
+        -  # empty shell

@@ -4,69 +4,37 @@ return {
 	config = function()
 		local conform = require("conform")
 
+		-- biome-check only runs when a biome config is found upward from the buffer
+		-- (see require_cwd below), so prettier takes over in every other project
+		local web = { "biome-check", "prettier", stop_after_first = true }
+
 		conform.setup({
+			formatters = {
+				["biome-check"] = {
+					require_cwd = true,
+				},
+			},
 			formatters_by_ft = {
-				typescript = function(bufnr)
-					if conform.get_formatter_info("prettier", bufnr).available then
-						return { "prettier", lsp_fallback = "never" }
-					else
-						return { "biome", "prettier", "biome-organize-imports", "biome-check", lsp_format = "never" }
-					end
-				end,
-				javascript = function(bufnr)
-					if conform.get_formatter_info("prettier", bufnr).available then
-						return { "prettier", lsp_fallback = "never" }
-					else
-						return { "biome", "prettier", "biome-organize-imports", "biome-check", lsp_format = "never" }
-					end
-				end,
-				typescriptreact = function(bufnr)
-					if conform.get_formatter_info("prettier", bufnr).available then
-						return { "prettier", lsp_fallback = "never" }
-					else
-						return { "biome", "prettier", "biome-organize-imports", "biome-check", lsp_format = "never" }
-					end
-				end,
-				javascriptreact = function(bufnr)
-					if conform.get_formatter_info("prettier", bufnr).available then
-						return { "prettier", lsp_fallback = "never" }
-					else
-						return { "biome", "prettier", "biome-organize-imports", "biome-check", lsp_format = "never" }
-					end
-				end,
-				svelte = { "biome", "prettier", "biome-organize-imports", "biome-check" },
-				css = { "biome", "prettier", "biome-check" },
-				html = { "biome", "prettier", "biome-check" },
-				json = function(bufnr)
-					if conform.get_formatter_info("prettier", bufnr).available then
-						return { "prettier", lsp_fallback = "never" }
-					else
-						return { "biome", "prettier", "biome-check", lsp_format = "never" }
-					end
-				end,
-				yaml = function(bufnr)
-					if conform.get_formatter_info("prettier", bufnr).available then
-						return { "prettier", lsp_fallback = "never" }
-					else
-						return { "biome", "prettier", "biome-check", lsp_format = "never" }
-					end
-				end,
+				javascript = web,
+				javascriptreact = web,
+				typescript = web,
+				typescriptreact = web,
+				json = web,
+				jsonc = web,
+				css = web,
+				html = web,
+				graphql = web,
+				svelte = web,
+				yaml = { "prettier" },
 				markdown = { "prettier" },
-				graphql = { "biome", "biome-check" },
 				lua = { "stylua" },
 				go = { "gofumpt" },
-				python = function(bufnr)
-					if conform.get_formatter_info("ruff_format", bufnr).available then
-						return { "ruff_format", "ruff_fix", "ruff_organize_imports" }
-					else
-						return { "isort", "black" }
-					end
-				end,
+				python = { "ruff_format", "ruff_fix", "ruff_organize_imports" },
 				rust = { "rustfmt" },
 				proto = { "buf" },
 			},
 			format_on_save = {
-				lsp_fallback = true,
+				lsp_format = "fallback",
 				async = false,
 				timeout_ms = 1000,
 			},
@@ -74,7 +42,7 @@ return {
 
 		vim.keymap.set({ "n", "v" }, "<leader>mp", function()
 			conform.format({
-				lsp_fallback = true,
+				lsp_format = "fallback",
 				async = false,
 				timeout_ms = 1000,
 			})

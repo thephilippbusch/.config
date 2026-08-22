@@ -31,6 +31,7 @@ return {
 			ensure_installed = {
 				"biome",
 				"cssls",
+				"eslint",
 				"graphql",
 				"html",
 				"jsonls",
@@ -55,7 +56,6 @@ return {
 				"ruff", -- python formatter
 				"stylua", -- lua formatter
 				"buf", -- protobuffer formatter
-				"eslint", -- ts/js linter
 				"black", -- fallback python formatter
 				"isort", -- fallback python import sorter
 			},

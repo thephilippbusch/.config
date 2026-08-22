@@ -99,6 +99,13 @@ return {
 			},
 		})
 
+		-- Disable eslint language server formatting in favor of prettier via conform
+		vim.lsp.config("eslint", {
+			settings = {
+				format = false,
+			},
+		})
+
 		vim.lsp.config("lua_ls", {
 			settings = {
 				Lua = {

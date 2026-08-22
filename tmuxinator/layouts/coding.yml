@@ -8,6 +8,6 @@ base_windows: &base_windows
   - git:
       panes:
         - lg
-  - opencode:
+  - agent:
       panes:
-        - opencode
+        - agent

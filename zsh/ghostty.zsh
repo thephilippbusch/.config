@@ -1,4 +1,4 @@
 # ---- Ghostty ----
-if [ -n "${GHOSTTY_RESOURCES_DIR}" ]; then
-    builtin source "${GHOSTTY_RESOURCES_DIR}/shell-integration/zsh/ghostty-integration"
-fi
+# Shell integration disabled: its OSC 133 mark injection corrupts p10k's
+# two-line prompt (stray "}}" before the second line, matching the same bug
+# class as ghostty-org/ghostty discussion #11407 for the Pure prompt theme).

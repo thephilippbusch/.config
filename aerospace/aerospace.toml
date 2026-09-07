@@ -244,3 +244,6 @@ run = "move-node-to-workspace C"
 if.app-id = "com.microsoft.Outlook"
 run = "move-node-to-workspace M"
 
+[[on-window-detected]]
+if.app-id = "com.microsoft.autoupdate2"
+run = "move-node-to-workspace 1"
